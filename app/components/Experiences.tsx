@@ -20,7 +20,7 @@ const Experiences: React.FC = () => {
         <ul className="space-y-8">
           {/* Élément 1 */}
           <li className="relative -ml-7">
-            <div className="absolute left-0 top-1 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
+            <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
             <div className="ml-6 text-lg">
               <strong>
                 2023 - 2024 - Conception Développeuse Applications
@@ -44,7 +44,7 @@ const Experiences: React.FC = () => {
 
           {/* Élément 2 */}
           <li className="relative -ml-7">
-            <div className="absolute left-0 top-1 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
+            <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
             <div className="ml-6 text-lg">
               <strong>2021 - 2022 - Développeuse Web & Web mobile</strong>
               <span className="block text-gray-400">
@@ -65,7 +65,7 @@ const Experiences: React.FC = () => {
 
           {/* Élément 3 : Section de reconversion */}
           <li className="relative -ml-7">
-            <div className="absolute left-0 top-1 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
+            <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
             <div className="ml-6">
               <strong className="text-lg">Parcours avant reconversion</strong>
               <ul className="list-disc list-inside space-y-1 mt-2">

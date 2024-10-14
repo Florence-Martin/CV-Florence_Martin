@@ -13,14 +13,14 @@
 :root {
   --background: #fff; /*  Arrière-plan card */
   --foreground: #222c73;
-  --line-color: #333333;
-  --point-color: #333333;
+  --line-color: #222c73;
+  --point-color: #222c73;
 }
 
 /* Mode sombre avec la classe "dark" */
 .dark {
   --background: #2d416a; /* Arrière-plan sombre des cards */
   --foreground: #eee; /* Texte clair */
-  --line-color: #d8d8d8;
-  --point-color: #d8d8d8;
+  --line-color: #eee;
+  --point-color: #eee;
 }

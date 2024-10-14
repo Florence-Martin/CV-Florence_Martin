@@ -18,7 +18,7 @@ const Education: React.FC = () => {
         <ul className="space-y-8">
           {/* Élément 1 */}
           <li className="relative -ml-7">
-            <div className="absolute left-0 top-1 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
+            <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
             <div className="ml-6 text-lg">
               <strong>2023 - 2024 :</strong> Conception Développeuse
               d&apos;Applications
@@ -33,7 +33,7 @@ const Education: React.FC = () => {
 
           {/* Élément 2 */}
           <li className="relative -ml-7">
-            <div className="absolute left-0 top-1 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
+            <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
             <div className="ml-6 text-lg">
               <strong>2021 - 2022 :</strong> Développeuse Web & Web mobile
               <ul className="list-disc pl-5">
@@ -44,7 +44,7 @@ const Education: React.FC = () => {
 
           {/* Élément 3 */}
           <li className="relative -ml-7">
-            <div className="absolute left-0 top-1 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
+            <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
             <div className="ml-6">
               <strong>2017 - 2019 :</strong> Réflexologue
             </div>
@@ -52,7 +52,7 @@ const Education: React.FC = () => {
 
           {/* Élément 4 */}
           <li className="relative -ml-7">
-            <div className="absolute left-0 top-1 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
+            <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
             <div className="ml-6">
               <strong>1988 - 1990 :</strong> Ergothérapeute
             </div>
