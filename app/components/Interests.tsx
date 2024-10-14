@@ -1,3 +1,7 @@
+import React from "react";
+
+const interests = ["Voyages", "Ski - Montagne", "Cinéma", "Musique"];
+
 const Interests: React.FC = () => {
   return (
     <div className="bg-background text-foreground p-6 rounded-lg shadow-lg">
@@ -5,10 +9,9 @@ const Interests: React.FC = () => {
         <h2 className="text-xl font-semibold pl-2">CENTRES D&apos;INTERETS</h2>
       </div>
       <ul className="list-none space-y-2">
-        <li>Voyages</li>
-        <li>Ski - Montagne</li>
-        <li>Cinéma</li>
-        <li>Musique</li>
+        {interests.map((interest, index) => (
+          <li key={index}>{interest}</li>
+        ))}
       </ul>
     </div>
   );

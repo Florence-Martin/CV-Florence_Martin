@@ -21,8 +21,8 @@
   },
   "devDependencies": {
     "@types/next": "^8.0.7",
-    "@types/node": "^20",
-    "@types/react": "^18",
+    "@types/node": "20.16.11",
+    "@types/react": "18.3.11",
     "@types/react-dom": "^18",
     "@types/react-icons": "^2.2.7",
     "autoprefixer": "^10.4.20",

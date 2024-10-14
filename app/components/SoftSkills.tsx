@@ -1,3 +1,13 @@
+import React from "react";
+
+const skills = [
+  "Esprit d'équipe",
+  "Adaptabilité, Curiosité",
+  "Résilience, Orientation résultats",
+  "Empathie, Aisance relationnelle",
+  "Autonomie, Tenacité, Organisation",
+];
+
 const SoftSkills: React.FC = () => {
   return (
     <div className="bg-background text-foreground p-6 rounded-lg shadow-lg">
@@ -6,11 +16,9 @@ const SoftSkills: React.FC = () => {
       </div>
       <div className="space-y-4">
         <ul className="list-disc list-inside space-y-2">
-          <li>Esprit d&apos;équipe</li>
-          <li>Adaptabilité, Curiosité</li>
-          <li>Résilience, Orientation résultats</li>
-          <li>Empathie, Aisance relationnelle</li>
-          <li>Autonomie, Tenacité, Organisation</li>
+          {skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
         </ul>
       </div>
     </div>

@@ -1,5 +1,38 @@
 import { PiBriefcaseThin } from "react-icons/pi";
 
+interface ExperienceItemProps {
+  yearRange: string;
+  title: string;
+  company: string;
+  location: string;
+  details: string[];
+}
+
+const ExperienceItem: React.FC<ExperienceItemProps> = ({
+  yearRange,
+  title,
+  company,
+  location,
+  details,
+}) => (
+  <li className="relative -ml-7">
+    <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
+    <div className="ml-6 text-lg">
+      <strong>
+        {yearRange} - {title}
+      </strong>
+      <span className="block text-gray-400">
+        {company} - {location}
+      </span>
+      <ul className="list-disc list-inside space-y-1 mt-2">
+        {details.map((detail, index) => (
+          <li key={index}>{detail}</li>
+        ))}
+      </ul>
+    </div>
+  </li>
+);
+
 const Experiences: React.FC = () => {
   return (
     <div
@@ -8,62 +41,38 @@ const Experiences: React.FC = () => {
     >
       <div className="flex items-center border-t-2 border-b-2 py-1 border-[#414042] mb-4">
         <h2 className="text-2xl font-semibold flex items-center">
-          <PiBriefcaseThin className="mr-2" />
+          <div className="mr-2">
+            <PiBriefcaseThin />
+          </div>
           EXPERIENCE PROFESSIONNELLE
         </h2>
       </div>
 
       <div className="relative pl-8">
-        {/* Ligne verticale */}
         <div className="absolute left-2 top-1.5 bottom-0 w-0.5 bg-[var(--line-color)]"></div>
-
         <ul className="space-y-8">
-          {/* Élément 1 */}
-          <li className="relative -ml-7">
-            <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
-            <div className="ml-6 text-lg">
-              <strong>
-                2023 - 2024 - Conception Développeuse Applications
-              </strong>
-              <span className="block text-gray-400">
-                Ingeli - Brignais (69)
-              </span>
-              <ul className="list-disc list-inside space-y-1 mt-2">
-                <li>
-                  Développement d’IHM pour applications industrielles en IoT
-                </li>
-                <li>Création et intégration de composants UX/UI Design</li>
-                <li>
-                  Conception de templates emailing et ergonomie des interfaces
-                  utilisateurs
-                </li>
-                <li>Environnement DevOps</li>
-              </ul>
-            </div>
-          </li>
-
-          {/* Élément 2 */}
-          <li className="relative -ml-7">
-            <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
-            <div className="ml-6 text-lg">
-              <strong>2021 - 2022 - Développeuse Web & Web mobile</strong>
-              <span className="block text-gray-400">
-                NumeriCité – Paris/Lyon
-              </span>
-              <ul className="list-disc list-inside space-y-1 mt-2">
-                <li>
-                  Participation à des projets de transformation numérique :
-                  intégration front-end, création de maquettes UX/UI
-                </li>
-                <li>
-                  Réalisation d’interfaces graphiques (maquettes, intégration)
-                  et amélioration de l’ergonomie des sites web
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          {/* Élément 3 : Section de reconversion */}
+          <ExperienceItem
+            yearRange="2023 - 2024"
+            title="Conception Développeuse Applications"
+            company="Ingeli"
+            location="Brignais (69)"
+            details={[
+              "Développement d’IHM pour applications industrielles en IoT",
+              "Création et intégration de composants UX/UI Design",
+              "Conception de templates emailing et ergonomie des interfaces utilisateurs",
+              "Environnement DevOps",
+            ]}
+          />
+          <ExperienceItem
+            yearRange="2021 - 2022"
+            title="Développeuse Web & Web mobile"
+            company="NumeriCité"
+            location="Paris/Lyon"
+            details={[
+              "Participation à des projets de transformation numérique : intégration front-end, création de maquettes UX/UI",
+              "Réalisation d’interfaces graphiques (maquettes, intégration) et amélioration de l’ergonomie des sites web",
+            ]}
+          />
           <li className="relative -ml-7">
             <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
             <div className="ml-6">
@@ -85,7 +94,7 @@ const Experiences: React.FC = () => {
                   relation clientèle B to B - Objets publicitaires - Bijouterie
                 </li>
                 <li>
-                  <strong> 1992 - 1998</strong> | Florence Avril - gérante de
+                  <strong>1992 - 1998</strong> | Florence Avril - gérante de
                   société B to B - Fabricant Bijouterie / Joaillerie
                 </li>
               </ul>
