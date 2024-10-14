@@ -26,11 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-cover bg-center`}
         style={{
-          // backgroundImage: "url('/assets/images/background-image.jpg')",
           backgroundColor: "var(--background-color)",
         }}
       >
