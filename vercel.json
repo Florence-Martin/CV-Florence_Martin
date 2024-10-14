@@ -2,8 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "next.config.js",
+      "src": "app/**",
       "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
     }
   ]
 }
