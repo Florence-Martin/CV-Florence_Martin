@@ -43,14 +43,23 @@ export default function Home() {
 
         {/* Menu mobile visible seulement sur petits écrans */}
         <nav className="flex justify-around py-2 bg-blue-600 text-white sm:hidden">
-          <Link href="#education" className="z-30 hover:underline">
-            Formation
-          </Link>
-          <Link href="#experiences" className="z-30 hover:underline">
+          <Link
+            href="#experiences"
+            className="z-30 border-l-2 border-b-2 border-l-gray-50 border-b-gray-50 p-1 rounded-bl-md hover:rounded-tl-md hover:rounded-r-md hover:bg-gray-50 hover:text-blue-600"
+          >
             Experience
           </Link>
-          <Link href="#skills" className="z-30 hover:underline">
+          <Link
+            href="#skills"
+            className="z-30 border-l-2 border-b-2 border-l-gray-50 border-b-gray-50 p-1 rounded-bl-md hover:rounded-tl-md hover:rounded-r-md hover:bg-gray-50 hover:text-blue-600"
+          >
             Compétence
+          </Link>
+          <Link
+            href="#education"
+            className="z-30 border-l-2 border-b-2 border-l-gray-50 border-b-gray-50 p-1 rounded-bl-md hover:rounded-tl-md hover:rounded-r-md hover:bg-gray-50 hover:text-blue-600"
+          >
+            Formation
           </Link>
         </nav>
 
@@ -66,9 +75,9 @@ export default function Home() {
 
           {/* Contenu principal sur la droite */}
           <section className="z-20 space-y-6 md:col-span-3">
-            <Education />
             <Experiences />
             <Skills />
+            <Education />
           </section>
         </main>
       </div>
