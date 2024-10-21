@@ -5,6 +5,7 @@ interface ExperienceItemProps {
   title: string;
   company: string;
   location: string;
+  technology: string;
   details: string[];
 }
 
@@ -13,6 +14,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   title,
   company,
   location,
+  technology,
   details,
 }) => (
   <li className="relative -ml-7">
@@ -22,7 +24,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         {yearRange} - {title}
       </strong>
       <span className="block text-gray-400">
-        {company} - {location}
+        {company} - {location} - Technos: {technology}
       </span>
       <ul className="list-disc list-inside space-y-1 mt-2">
         {details.map((detail, index) => (
@@ -53,9 +55,10 @@ const Experiences: React.FC = () => {
         <ul className="space-y-8">
           <ExperienceItem
             yearRange="2023 - 2024"
-            title="Conception Développeuse Applications"
+            title="Conception Développeuse d'Applications"
             company="Ingeli"
             location="Brignais (69)"
+            technology="C# | MongoDB | SCSS | DevOps"
             details={[
               "Développement d’IHM pour applications industrielles en IoT",
               "Création et intégration de composants UX/UI Design",
@@ -68,6 +71,7 @@ const Experiences: React.FC = () => {
             title="Développeuse Web & Web mobile"
             company="NumeriCité"
             location="Paris/Lyon"
+            technology="React | CSS"
             details={[
               "Participation à des projets de transformation numérique : intégration front-end, création de maquettes UX/UI",
               "Réalisation d’interfaces graphiques (maquettes, intégration) et amélioration de l’ergonomie des sites web",

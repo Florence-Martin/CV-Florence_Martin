@@ -1,6 +1,11 @@
-import { FaLinkedin, FaGithub } from "react-icons/fa"; // Importation des icônes
+import { FaLinkedin, FaGithub, FaBookOpen } from "react-icons/fa";
 
 const socialLinks = [
+  {
+    href: "https://portfolio-florence-martin.vercel.app/",
+    icon: <FaBookOpen className="mr-2 text-xl" />,
+    label: "Portfolio",
+  },
   {
     href: "https://www.linkedin.com/in/florence-martin-922b3861/",
     icon: <FaLinkedin className="mr-2 text-xl" />,
