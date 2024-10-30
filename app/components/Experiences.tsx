@@ -55,7 +55,7 @@ const Experiences: React.FC = () => {
         <ul className="space-y-8">
           <ExperienceItem
             yearRange="2023 - 2024"
-            title="Conception Développeuse d'Applications"
+            title="Conceptrice Développeuse d'Applications"
             company="Ingeli"
             location="Brignais (69)"
             technology="C# | MongoDB | SCSS | DevOps"
