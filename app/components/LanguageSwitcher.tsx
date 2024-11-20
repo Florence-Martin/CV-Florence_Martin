@@ -9,6 +9,7 @@ const LanguageSwitcher: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme(); // Récupérer le mode actuel (dark ou light)
   const menuRef = useRef<HTMLDivElement | null>(null); // Ref pour le conteneur du menu
+  const { t } = useTranslation("common");
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -54,13 +55,13 @@ const LanguageSwitcher: React.FC = () => {
             className="w-full px-4 py-2 text-left hover:bg-blue-100 text-blue-600 dark:hover:bg-gray-600 dark:text-gray-300"
             onClick={() => changeLanguage("fr")}
           >
-            Français
+            {t("native-language")}
           </button>
           <button
             className="w-full px-4 py-2 text-left hover:bg-blue-100 text-blue-600 dark:hover:bg-gray-600 dark:text-gray-300"
             onClick={() => changeLanguage("en")}
           >
-            Anglais
+            {t("additional-language")}
           </button>
         </div>
       )}
