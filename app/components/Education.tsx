@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { PiStudentLight } from "react-icons/pi";
 
 interface EducationItem {
@@ -6,31 +7,14 @@ interface EducationItem {
   details?: string[];
 }
 
-const educationData: EducationItem[] = [
-  {
-    yearRange: "2023 - 2024",
-    title: "Conception Développeuse d'Applications",
-    details: [
-      "Titre CDA niveau 6 (09-2024) - Certification DevOps (10-2024)",
-      "Simplon - en alternance avec la société Ingeli",
-    ],
-  },
-  {
-    yearRange: "2021 - 2022",
-    title: "Développeuse Web & Web mobile",
-    details: ["Wild Code School"],
-  },
-  {
-    yearRange: "2017 - 2019",
-    title: "Réflexologue",
-  },
-  {
-    yearRange: "1988 - 1990",
-    title: "Ergothérapeute",
-  },
-];
-
 const Education: React.FC = () => {
+  const { t } = useTranslation("common");
+
+  // Données extraites depuis le fichier JSON avec t()
+  const educationData = t("educationData.items", {
+    returnObjects: true,
+  }) as EducationItem[];
+
   return (
     <div
       id="education"
@@ -41,7 +25,7 @@ const Education: React.FC = () => {
           <div className="mr-2">
             <PiStudentLight />
           </div>
-          FORMATION
+          {t("formation")}
         </h2>
       </div>
       <div className="relative pl-8">
@@ -51,11 +35,11 @@ const Education: React.FC = () => {
             <li key={index} className="relative -ml-7">
               <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
               <div className="ml-6 text-lg">
-                <strong>{item.yearRange} :</strong> {item.title}
+                <strong>{item.yearRange} :</strong> {t(item.title)}
                 {item.details && (
                   <ul className="list-disc pl-5">
                     {item.details.map((detail, detailIndex) => (
-                      <li key={detailIndex}>{detail}</li>
+                      <li key={detailIndex}>{t(detail)}</li>
                     ))}
                   </ul>
                 )}

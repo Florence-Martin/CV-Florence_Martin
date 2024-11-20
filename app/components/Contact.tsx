@@ -1,14 +1,17 @@
+import { useTranslation } from "react-i18next";
 import { FaHome, FaPhone, FaEnvelope, FaLanguage } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
 
-const contactDetails = [
-  { icon: FaHome, label: "Localisation", value: "Lyon - 69004" },
-  { icon: FaPhone, label: "Téléphone", value: "06 81 14 24 55" },
-  { icon: FaEnvelope, label: "Email", value: "florence.martin469@gmail.com" },
-  { icon: FaLanguage, label: "Langues", value: "Anglais" },
-];
-
 const Contact: React.FC = () => {
+  const { t } = useTranslation("common");
+
+  const contactDetails = [
+    { icon: FaHome, label: "Localisation", value: "Lyon - 69004 - France" },
+    { icon: FaPhone, label: "Téléphone", value: "+33 (0)6 81 14 24 55" },
+    { icon: FaEnvelope, label: "Email", value: "florence.martin469@gmail.com" },
+    { icon: FaLanguage, label: "Langues", value: t("language") },
+  ];
+
   return (
     <div className="bg-background text-foreground p-6 rounded-lg shadow-lg">
       <div className="flex items-center border-t-2 border-b-2 py-1 border-gray-400 mb-4">

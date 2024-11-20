@@ -1,3 +1,5 @@
+import { use } from "react";
+import { useTranslation } from "react-i18next";
 import { PiBriefcaseThin } from "react-icons/pi";
 
 interface ExperienceItemProps {
@@ -36,6 +38,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 );
 
 const Experiences: React.FC = () => {
+  const { t } = useTranslation("common");
   return (
     <div
       id="experiences"
@@ -46,7 +49,7 @@ const Experiences: React.FC = () => {
           <div className="mr-2">
             <PiBriefcaseThin />
           </div>
-          EXPERIENCE PROFESSIONNELLE
+          {t("work-experience")}
         </h2>
       </div>
 
@@ -55,51 +58,53 @@ const Experiences: React.FC = () => {
         <ul className="space-y-8">
           <ExperienceItem
             yearRange="2023 - 2024"
-            title="Conceptrice Développeuse d'Applications"
-            company="Ingeli"
+            title={t("experience.developer_applications")}
+            company={t("experience.ingeli")}
             location="Brignais (69)"
             technology="C# | MongoDB | SCSS | DevOps"
             details={[
-              "Développement d’IHM pour applications industrielles en IoT",
-              "Création et intégration de composants UX/UI Design",
-              "Conception de templates emailing et ergonomie des interfaces utilisateurs",
-              "Environnement DevOps",
+              t("experience.details.iot"),
+              t("experience.details.ux_ui_design"),
+              t("experience.details.email_templates"),
+              t("experience.details.devops"),
             ]}
           />
           <ExperienceItem
             yearRange="2021 - 2022"
-            title="Développeuse Web & Web mobile"
-            company="NumeriCité"
+            title={t("experience.developer_web_mobile")}
+            company={t("experience.numericite")}
             location="Paris/Lyon"
             technology="React | CSS"
             details={[
-              "Participation à des projets de transformation numérique : intégration front-end, création de maquettes UX/UI",
-              "Réalisation d’interfaces graphiques (maquettes, intégration) et amélioration de l’ergonomie des sites web",
+              t("experience.details.numericite_ux_ui"),
+              t("experience.details.numericite_graphics"),
             ]}
           />
           <li className="relative -ml-7">
             <div className="absolute left-0 top-1.5 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
             <div className="ml-6">
-              <strong className="text-lg">Parcours avant reconversion</strong>
+              <strong className="text-lg">
+                {t("experience.previous_career")}
+              </strong>
               <ul className="list-disc list-inside space-y-1 mt-2">
                 <li>
-                  <strong>2017 - 2021 </strong>| Réflexologue indépendante
+                  <strong>2017 - 2021 </strong>| {t("experience.reflexologist")}
                 </li>
                 <li>
-                  <strong>2013 - 2018 </strong>| Spot Objectivement - admin. des
-                  ventes B to B - Objets publicitaires
+                  <strong>2013 - 2018 </strong>| Spot Objectivement -{" "}
+                  {t("experience.sales_admin")}
                 </li>
                 <li>
-                  <strong>2002 - 2013 </strong>| TS Compack - gérante de société
-                  B to B - Fabricant textiles compactés
+                  <strong>2002 - 2013 </strong>| TS Compack -{" "}
+                  {t("experience.business_manager")}
                 </li>
                 <li>
-                  <strong>1999 - 2002 </strong>| ATP - admin. des ventes /
-                  relation clientèle B to B - Objets publicitaires - Bijouterie
+                  <strong>1999 - 2002 </strong>| ATP -{" "}
+                  {t("experience.client_relationship")}
                 </li>
                 <li>
-                  <strong>1992 - 1998</strong> | Florence Avril - gérante de
-                  société B to B - Fabricant Bijouterie / Joaillerie
+                  <strong>1992 - 1998</strong> | Florence Avril -{" "}
+                  {t("experience.jewelry_manager")}
                 </li>
               </ul>
             </div>

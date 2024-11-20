@@ -1,8 +1,16 @@
 import React from "react";
-
-const interests = ["Voyages", "Ski - Montagne", "Cinéma", "Musique"];
+import { useTranslation } from "react-i18next";
 
 const Interests: React.FC = () => {
+  const { t } = useTranslation("common");
+
+  const interests = [
+    t("interests.travel"),
+    t("interests.skiing_mountains"),
+    t("interests.cinema"),
+    t("interests.music"),
+  ];
+
   return (
     <div className="bg-background text-foreground p-6 rounded-lg shadow-lg">
       <div className="flex items-center border-t-2 border-b-2 py-1 border-gray-400 mb-4">

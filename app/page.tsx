@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Profile from "../app/components/Profil";
+import Profil from "../app/components/Profil";
 import Contact from "../app/components/Contact";
 import SoftSkills from "../app/components/SoftSkills";
 import Interests from "../app/components/Interests";
@@ -12,10 +12,13 @@ import Skills from "../app/components/Skills";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { FiMoon, FiSun } from "react-icons/fi";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation("common");
 
   useEffect(() => setMounted(true), []);
 
@@ -27,7 +30,9 @@ export default function Home() {
       <div className="fixed bottom-0 right-0 w-52 h-96 bg-blue-600 rounded-tl-lg"></div>
 
       <div>
-        <header className="flex justify-end px-3">
+        <header className="flex justify-end px-3 items-center">
+          {/* Intégration du LanguageSwitcher */}
+          <LanguageSwitcher />
           {/* Bouton de changement de thème */}
           <button
             className="rounded-full px-1 py-1 md:px-4 md:py-4 text-sm"
@@ -47,26 +52,26 @@ export default function Home() {
             href="#experiences"
             className="z-30 border-l-2 border-b-2 border-l-gray-50 border-b-gray-50 p-1 rounded-bl-md hover:rounded-tl-md hover:rounded-r-md hover:bg-gray-50 hover:text-blue-600"
           >
-            Experience
+            {t("work")}
           </Link>
           <Link
             href="#skills"
             className="z-30 border-l-2 border-b-2 border-l-gray-50 border-b-gray-50 p-1 rounded-bl-md hover:rounded-tl-md hover:rounded-r-md hover:bg-gray-50 hover:text-blue-600"
           >
-            Compétence
+            {t("skill")}
           </Link>
           <Link
             href="#education"
             className="z-30 border-l-2 border-b-2 border-l-gray-50 border-b-gray-50 p-1 rounded-bl-md hover:rounded-tl-md hover:rounded-r-md hover:bg-gray-50 hover:text-blue-600"
           >
-            Formation
+            {t("education")}
           </Link>
         </nav>
 
         <main className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full px-3 md:px-10 ">
           {/* Sidebar sur la gauche */}
           <aside className="z-20 space-y-6 md:col-span-1">
-            <Profile />
+            <Profil />
             <Contact />
             <SocialLinks />
             <SoftSkills />

@@ -1,34 +1,36 @@
+import { useTranslation } from "react-i18next";
 import { PiCodeThin } from "react-icons/pi";
 
 const skillsData = [
   {
-    category: "Langages et frameworks",
-    details:
-      "HTML, CSS, SCSS, Tailwind, React, Next.js, Typescript, React Native, Node, Express",
+    categoryKey: "skills.categories.languages_frameworks",
+    detailsKey: "skills.details.languages_frameworks",
   },
   {
-    category: "Bases de données",
-    details: "MySQL, PostgreSQL",
+    categoryKey: "skills.categories.databases",
+    detailsKey: "skills.details.databases",
   },
   {
-    category: "Outils DevOps",
-    details: "CI/CD, Docker, Docker-compose, GitHub Actions",
+    categoryKey: "skills.categories.devops_tools",
+    detailsKey: "skills.details.devops_tools",
   },
   {
-    category: "Design",
-    details: "Figma, Illustrator, UX/UI, WordPress",
+    categoryKey: "skills.categories.design",
+    detailsKey: "skills.details.design",
   },
   {
-    category: "Gestion de projet",
-    details: "Jira, Confluence, Trello, Méthodologie Agile/Scrum",
+    categoryKey: "skills.categories.project_management",
+    detailsKey: "skills.details.project_management",
   },
   {
-    category: "Outils supplémentaires",
-    details: "Notion, WebStorm, StarUML, Looping, JMerise",
+    categoryKey: "skills.categories.additional_tools",
+    detailsKey: "skills.details.additional_tools",
   },
 ];
 
 const Skills: React.FC = () => {
+  const { t } = useTranslation("common");
+
   return (
     <div id="skills" className="bg-background text-foreground p-6 rounded-lg">
       <div className="flex items-center border-t-2 border-b-2 py-1 border-gray-400 mb-4">
@@ -36,7 +38,7 @@ const Skills: React.FC = () => {
           <div className="mr-2">
             <PiCodeThin />
           </div>
-          COMPETENCES TECHNOS
+          {t("technical-skills")}
         </h2>
       </div>
       <div className="relative pl-8">
@@ -48,8 +50,8 @@ const Skills: React.FC = () => {
             <li key={index} className="relative -ml-7">
               <div className="absolute left-0 top-1 w-3 h-3 bg-[var(--point-color)] rounded-full"></div>
               <div className="ml-6 text-lg">
-                <strong>{skill.category}</strong>
-                <p>{skill.details}</p>
+                <strong>{t(skill.categoryKey)}</strong>
+                <p>{t(skill.detailsKey)}</p>
               </div>
             </li>
           ))}

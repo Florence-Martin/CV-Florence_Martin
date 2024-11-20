@@ -1,0 +1,87 @@
+{
+  "title": "Mon Curriculum Vitae",
+  "description": "Je suis Conceptrice Développeuse d'Applications.",
+  "work": "Expériences",
+  "skill": "Compétences",
+  "education": "Formation",
+  "developper": "Développeuse",
+  "profil": "Conceptrice Développeuse d’Applications certifiée DevOps, avec une expérience en front-end et en gestion de projets. Spécialisée dans la création d’interfaces ergonomiques UX/UI et réactives (React, Next.js), j’optimise les processus de développement en environnement agile. Mon expertise me permet de collaborer efficacement avec des équipes multidisciplinaires et de garantir une gestion fluide des priorités et objectifs produits.",
+  "language": "Anglais | Français",
+  "soft-skills": "SAVOIR-ETRE",
+  "skills.teamwork": "Esprit d'équipe",
+  "skills.adaptability_curiosity": "Adaptabilité, Curiosité",
+  "skills.resilience_results_oriented": "Résilience, Orientation résultats",
+  "skills.empathy_relationships": "Empathie, Aisance relationnelle",
+  "skills.autonomy_tenacity_organization": "Autonomie, Tenacité, Organisation",
+  "interests.travel": "Voyages",
+  "interests.skiing_mountains": "Ski - Montagne",
+  "interests.cinema": "Cinéma",
+  "interests.music": "Musique",
+  "work-experience": "EXPÉRIENCES PROFESSIONNELLES",
+  "experience": {
+    "developer_applications": "Conceptrice Développeuse d'Applications",
+    "developer_web_mobile": "Développeuse Web & Web mobile",
+    "previous_career": "Parcours avant reconversion",
+    "ingeli": "Ingeli",
+    "numericite": "NumeriCité",
+    "reflexologist": "Réflexologue indépendante",
+    "sales_admin": "Admin. des ventes B to B - Objets publicitaires",
+    "business_manager": "Gérante de société B to B - Fabricant de textiles compactés",
+    "client_relationship": "Relation clientèle B to B - Objets publicitaires et bijouterie",
+    "jewelry_manager": "Gérante de société B to B - Fabricant Bijouterie / Joaillerie",
+    "details": {
+      "iot": "Développement d’IHM pour applications industrielles en IoT",
+      "ux_ui_design": "Création et intégration de composants UX/UI Design",
+      "email_templates": "Conception de templates emailing et ergonomie des interfaces utilisateurs",
+      "devops": "Environnement DevOps",
+      "numericite_ux_ui": "Participation à des projets de transformation numérique : intégration front-end, création de maquettes UX/UI",
+      "numericite_graphics": "Réalisation d’interfaces graphiques (maquettes, intégration) et amélioration de l’ergonomie des sites web"
+    }
+  },
+  "technical-skills": "COMPETENCES TECHNOS",
+  "skills": {
+    "categories": {
+      "languages_frameworks": "Langages et frameworks",
+      "databases": "Bases de données",
+      "devops_tools": "Outils DevOps",
+      "design": "Design",
+      "project_management": "Gestion de projet",
+      "additional_tools": "Outils supplémentaires"
+    },
+    "details": {
+      "languages_frameworks": "HTML, CSS, SCSS, Tailwind, React, Next.js, Typescript, React Native, Node, Express",
+      "databases": "MySQL, PostgreSQL",
+      "devops_tools": "CI/CD, Docker, Docker-compose, GitHub Actions",
+      "design": "Figma, Illustrator, UX/UI, WordPress",
+      "project_management": "Jira, Confluence, Trello, Méthodologie Agile/Scrum",
+      "additional_tools": "Notion, WebStorm, StarUML, Looping, JMerise"
+    }
+  },
+  "formation": "FORMATION",
+  "educationData": {
+    "items": [
+      {
+        "yearRange": "2023 - 2024",
+        "title": "Conception Développeuse d'Applications",
+        "details": [
+          "Titre CDA niveau 6 (09-2024)",
+          "Certification DevOps (10-2024)",
+          "Simplon - en alternance avec la société Ingeli"
+        ]
+      },
+      {
+        "yearRange": "2021 - 2022",
+        "title": "Développeuse Web & Web mobile",
+        "details": ["Wild Code School"]
+      },
+      {
+        "yearRange": "2017 - 2019",
+        "title": "Réflexologue"
+      },
+      {
+        "yearRange": "1988 - 1990",
+        "title": "Ergothérapeute"
+      }
+    ]
+  }
+}
