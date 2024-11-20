@@ -35,7 +35,7 @@ export default function Home() {
           <LanguageSwitcher />
           {/* Bouton de changement de thème */}
           <button
-            className="rounded-full px-1 py-1 md:px-4 md:py-4 text-sm"
+            className="rounded-full px-1 py-1 md:px-4 md:py-4 text-sm "
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {theme === "dark" ? (
