@@ -1,4 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Ce CV a été réalisé avec les technologies suivantes :
+
+- **Next.js** et **TypeScript** : pour une base solide, moderne et maintenable, facilitant le développement de sites web performants et sécurisés.
+- **i18next** : une bibliothèque de gestion des traductions et de l’internationalisation, permettant de gérer plusieurs langues avec des fichiers JSON, et une intégration fluide avec React et Next.js pour un contenu dynamique et localisé.
+- **TailwindCSS** : pour un design rapide, propre et personnalisé à l’aide de classes utilitaires, permettant une grande flexibilité de style sans écrire de CSS personnalisé.
+- **Lucide Icons** : pour des icônes vectorielles modernes et dynamiques, apportant une touche visuelle professionnelle et facilement personnalisable.
+
+Cette combinaison d’outils permet de créer une interface utilisateur moderne, réactive et visuellement attrayante, tout en assurant une structure de code propre et facilement maintenable.
 
 ## Getting Started
 
