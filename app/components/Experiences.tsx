@@ -1,4 +1,3 @@
-import { use } from "react";
 import { useTranslation } from "react-i18next";
 import { PiBriefcaseThin } from "react-icons/pi";
 
